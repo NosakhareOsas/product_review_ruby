@@ -10,6 +10,10 @@ class Product < ActiveRecord::Base
         self.reviews.each do |review|
             puts "Review for #{review.product.name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"
         end
-    end 
+    end
+    
+    def average_rating
+        self.reviews.average(:star_rating).to_f
+    end
 
 end
