@@ -17,6 +17,10 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating reviews..."
-review1 = Review.create()
+review1 = Review.create(star_rating: 5, comment: "I love this game", user_id: rand(1..3), product_id: rand(1..5))
+review2 = Review.create(star_rating: 3, comment: "Not bad", user_id: rand(1..3), product_id: rand(1..5))
+review3 = Review.create(star_rating: 1, comment: "Worst game ever", user_id: rand(1..3), product_id: rand(1..5))
+review4 = Review.create(star_rating: 3, comment: "Average at best", user_id: rand(1..3), product_id: rand(1..5))
+
 
 puts "Seeding done!"
