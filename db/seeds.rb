@@ -17,10 +17,6 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating reviews..."
-# *****************************************************************
-# * TODO: create reviews! Remember, a review belongs to a product *
-# * and a review belongs to an user.                              *
-# *****************************************************************
-# Create Reviews Here
+review1 = Review.create()
 
 puts "Seeding done!"
