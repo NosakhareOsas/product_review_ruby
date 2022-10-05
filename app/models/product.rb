@@ -15,5 +15,11 @@ class Product < ActiveRecord::Base
     def average_rating
         self.reviews.average(:star_rating).to_f
     end
-
+####for movie code challenge
+    def self.most_successful
+        all_salaries={}
+        self.all.each{ |actor| all_salaries[actor.id]= actor.total_salary}
+        highest_id = all_salaries.max_by{|k,v| v}[0]
+        self.all.find(highest_id)
+    end
 end
